@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Download Link Verifier</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="shell" aria-live="polite">
+    <section class="hero glass">
+      <div>
+        <p class="eyebrow">Security Dashboard</p>
+        <h1>Smart Download Verifier</h1>
+        <p class="subtitle">Verify software sources, scan download buttons, and catch risky lookalike pages.</p>
+      </div>
+      <div class="shield" aria-hidden="true">🛡️</div>
+    </section>
+
+    <section class="score-card glass">
+      <div class="meter" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="meter-inner">
+          <strong id="trustScore">--</strong>
+          <span>/100</span>
+        </div>
+      </div>
+      <div class="score-copy">
+        <span id="statusPill" class="pill neutral">Not scanned</span>
+        <h2 id="softwareName">Current page</h2>
+        <p id="explanation">Click Scan Page to analyze the active tab.</p>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="scanBtn" class="primary">Scan Page</button>
+      <button id="highlightBtn" class="secondary">Highlight Downloads</button>
+      <button id="settingsToggle" class="ghost" aria-expanded="false">API Settings</button>
+    </section>
+
+    <section id="settingsPanel" class="settings glass hidden">
+      <h2>Reputation API Settings</h2>
+      <p>Keys are stored only in Chrome local extension storage and are never inserted into webpages.</p>
+      <label>
+        <span>Google Safe Browsing key</span>
+        <input id="safeBrowsingKey" type="password" autocomplete="off" placeholder="Configured key remains masked">
+      </label>
+      <label>
+        <span>VirusTotal key</span>
+        <input id="virusTotalKey" type="password" autocomplete="off" placeholder="Configured key remains masked">
+      </label>
+      <label>
+        <span>URLScan key</span>
+        <input id="urlscanKey" type="password" autocomplete="off" placeholder="Configured key remains masked">
+      </label>
+      <label class="toggle-row">
+        <input id="enableReputationChecks" type="checkbox" checked>
+        <span>Enable external reputation checks</span>
+      </label>
+      <button id="saveSettingsBtn" class="secondary full">Save Settings</button>
+      <p id="settingsStatus" class="tiny"></p>
+    </section>
+
+    <section class="glass details-grid">
+      <article>
+        <h3>Risk Indicators</h3>
+        <ul id="riskList" class="indicator-list"></ul>
+      </article>
+      <article>
+        <h3>Positive Signals</h3>
+        <ul id="reasonList" class="indicator-list"></ul>
+      </article>
+    </section>
+
+    <section class="glass links-card">
+      <div class="section-title">
+        <h3>Detected Download Links</h3>
+        <span id="linkCount" class="tiny">0 found</span>
+      </div>
+      <div id="downloadLinks" class="download-links empty">No links scanned yet.</div>
+    </section>
+
+    <section id="recommendation" class="recommendation glass hidden">
+      <h3>Recommended official source</h3>
+      <a id="recommendedUrl" href="#" target="_blank" rel="noopener noreferrer"></a>
+    </section>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

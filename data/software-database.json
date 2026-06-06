@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "software": [
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "aliases": ["vs code", "vscode", "visual studio code", "code editor"],
+      "officialDomains": ["code.visualstudio.com"],
+      "trustedMirrors": ["visualstudio.microsoft.com", "microsoft.com"],
+      "officialDownloadUrl": "https://code.visualstudio.com/Download"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "aliases": ["python", "python programming language", "cpython"],
+      "officialDomains": ["python.org", "www.python.org"],
+      "trustedMirrors": ["github.com/python", "files.pythonhosted.org"],
+      "officialDownloadUrl": "https://www.python.org/downloads/"
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "aliases": ["wireshark", "network protocol analyzer"],
+      "officialDomains": ["wireshark.org", "www.wireshark.org"],
+      "trustedMirrors": ["gitlab.com/wireshark", "github.com/wireshark"],
+      "officialDownloadUrl": "https://www.wireshark.org/download.html"
+    },
+    {
+      "id": "vlc",
+      "name": "VLC Media Player",
+      "aliases": ["vlc", "vlc media player", "videolan"],
+      "officialDomains": ["videolan.org", "www.videolan.org"],
+      "trustedMirrors": ["get.videolan.org", "download.videolan.org"],
+      "officialDownloadUrl": "https://www.videolan.org/vlc/"
+    },
+    {
+      "id": "android-studio",
+      "name": "Android Studio",
+      "aliases": ["android studio", "android ide"],
+      "officialDomains": ["developer.android.com"],
+      "trustedMirrors": ["dl.google.com", "google.com"],
+      "officialDownloadUrl": "https://developer.android.com/studio"
+    },
+    {
+      "id": "packet-tracer",
+      "name": "Cisco Packet Tracer",
+      "aliases": ["packet tracer", "cisco packet tracer"],
+      "officialDomains": ["skillsforall.com", "netacad.com", "www.netacad.com"],
+      "trustedMirrors": ["cisco.com"],
+      "officialDownloadUrl": "https://www.netacad.com/courses/packet-tracer"
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "aliases": ["obs", "obs studio", "open broadcaster software"],
+      "officialDomains": ["obsproject.com", "www.obsproject.com"],
+      "trustedMirrors": ["github.com/obsproject"],
+      "officialDownloadUrl": "https://obsproject.com/download"
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "aliases": ["google chrome", "chrome browser"],
+      "officialDomains": ["google.com", "www.google.com", "chrome.google.com"],
+      "trustedMirrors": ["dl.google.com"],
+      "officialDownloadUrl": "https://www.google.com/chrome/"
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "aliases": ["firefox", "mozilla firefox"],
+      "officialDomains": ["mozilla.org", "www.mozilla.org"],
+      "trustedMirrors": ["download.mozilla.org", "archive.mozilla.org"],
+      "officialDownloadUrl": "https://www.mozilla.org/firefox/new/"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "aliases": ["node.js", "nodejs", "node js"],
+      "officialDomains": ["nodejs.org", "www.nodejs.org"],
+      "trustedMirrors": ["github.com/nodejs"],
+      "officialDownloadUrl": "https://nodejs.org/en/download"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "aliases": ["git scm", "git version control", "git"],
+      "officialDomains": ["git-scm.com"],
+      "trustedMirrors": ["github.com/git-for-windows", "kernel.org"],
+      "officialDownloadUrl": "https://git-scm.com/downloads"
+    }
+  ],
+  "trustedDownloadPlatforms": [
+    "github.com",
+    "gitlab.com",
+    "sourceforge.net",
+    "fossies.org",
+    "microsoft.com",
+    "apps.microsoft.com",
+    "store.steampowered.com",
+    "apps.apple.com"
+  ],
+  "suspiciousKeywords": [
+    "crack",
+    "keygen",
+    "serial",
+    "activation key",
+    "patched",
+    "portable crack",
+    "torrent",
+    "warez",
+    "free full version",
+    "no survey",
+    "download manager",
+    "driver updater"
+  ],
+  "downloadKeywords": [
+    "download",
+    "install",
+    "get now",
+    "free download",
+    "start download",
+    "download now",
+    "get app",
+    "get started",
+    "setup"
+  ]
+}

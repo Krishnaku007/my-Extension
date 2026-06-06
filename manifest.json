@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Download Link Verifier",
+  "version": "1.0.0",
+  "description": "Analyze software download pages, verify official sources, and score download-link trust before you click.",
+  "minimum_chrome_version": "114",
+  "action": {
+    "default_title": "Smart Download Verifier",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "https://safebrowsing.googleapis.com/*",
+    "https://www.virustotal.com/*",
+    "https://urlscan.io/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/software-database.json"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "options_page": "popup/popup.html"
+}
